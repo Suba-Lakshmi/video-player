@@ -30,7 +30,7 @@ li {
   font-size: 20px;
   position: absolute;
   top: 6%;
-  right: 10%;
+  right: 40%;
 }
 .add:hover {
   cursor: pointer;
@@ -44,24 +44,6 @@ li {
 }
 .addUrl {
   margin-top: 0;
-}
-
-/* .popup {
-  display: block;
-  position: absolute;
-  margin: 100px;
-  color: white;
-  font-size: 20px;
-} */
-label {
-  padding-right: 5px;
-}
-.popup-input {
-  margin-bottom: 10px;
-}
-.popup-button:hover {
-  cursor: pointer;
-  background-color: blanchedalmond;
 }
 
 .dropdown-profile {
@@ -87,14 +69,54 @@ label {
   cursor: pointer;
   background-color: gray;
 }
-/* .dropdown-profile::before {
+
+.popup {
+  display: block;
+  border: 2px solid;
+  padding: 50px 80px 50px 40px;
+  color: white;
+  font-size: 20px;
+}
+.add-popup-button {
+  margin-top: 30px;
+  margin: 25px 150px;
+  padding: 10px 60px 10px 30px;
+  font-size: 20px;
+  text-align: center;
+
+  background-color: rgb(93, 93, 131);
+}
+.add-popup-button:hover {
+  cursor: pointer;
+  background-color: brown;
+}
+.input-popup {
+  margin-bottom: 40px;
+  padding: 5px 80px;
+  margin: 5px;
+  font-size: 25px;
+  background-color: #6f8d5c;
+}
+.list {
+  margin-top: 100px;
+  margin-right: 80%;
+  margin-left: 0;
+  padding: 0px;
+}
+.videoTitle {
+  color: white;
+  font-size: 30px;
+}
+.video {
   position: absolute;
-  top: -0.7rem;
-  right: 1.1rem;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  background-color: white;
-  border-left: 1px solid gray;
-  border-top: 1px solid gray;
-} */
+  bottom: 3%;
+  right: 5%;
+  top: 28%;
+  left: 50%;
+}
+h4 {
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  color: white;
+}

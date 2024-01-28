@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 
-const Video = ({ videos, url, title }) => {
+const Video = ({ videos }) => {
   const [currentVideo, setCurrentVideo] = useState(null);
 
   function handleVideo(video) {
-    // localStorage.setItem("Title", title);
-    // localStorage.setItem("Url", url);
     setCurrentVideo(video);
   }
+
   return (
     <div>
       <div className="list">
-        <ul>
+        <ul style={{ display: "block" }}>
           {/* <li className="head">Videos</li> */}
-          {videos.map((video) => (
-            <li className="videoTitle" onClick={() => handleVideo(video)}>
-              {video.title}
+          {videos.map((video, index) => (
+            <li
+              key={index}
+              className="videoTitle"
+              onClick={() => handleVideo(video)}
+            >
+              {video.url}
             </li>
           ))}
         </ul>
