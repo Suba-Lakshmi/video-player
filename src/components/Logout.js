@@ -1,14 +1,26 @@
 import React from "react";
 import "./Header.css";
+import { useDispatch } from "react-redux";
+import { deleteUser, updateSignIn, updateSignup } from "./userSlice";
 const Logout = () => {
+  const dispatch = useDispatch();
   function handleLogout() {
-    localStorage.removeItem("Signup");
-    window.location.reload();
+    dispatch(updateSignIn());
+    dispatch(updateSignup());
   }
-  function handleSingin() {
-    localStorage.clear();
-    window.location.reload();
+
+  function handleSignin() {
+    dispatch(deleteUser());
+    dispatch(updateSignup());
   }
+  // function handleLogout() {
+  //   localStorage.removeItem("Signup");
+  //   window.location.reload();
+  // }
+  // function handleSignin() {
+  //   localStorage.clear();
+  //   window.location.reload();
+  // }
 
   return (
     <>
@@ -25,7 +37,7 @@ const Logout = () => {
               fontSize: "16px",
               color: "white",
             }}
-            onClick={handleSingin}
+            onClick={(e) => handleSignin(e)}
           >
             Delete
           </li>
